@@ -19,7 +19,7 @@ const App = () => {
       <h1>Functional:</h1>
       <Functional/>
 
-      <h1>Class Component</h1>
+       <h1>Class Component</h1>
       <ClassComponent/>
     </div>
   );
