@@ -1,12 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import ClassComponent from './ClassComponent';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const Functional = () => {
+  let count = 0;
+
+  window.setInterval(() => {
+    count++;
+  }, 1000);
+
+  return <h2>Count is: { count }</h2>
+}
+
+const App = () => {
+  return (
+    <div>
+      <h1>Functional:</h1>
+      <Functional/>
+
+      <h1>Class Component</h1>
+      <ClassComponent/>
+    </div>
+  );
+}
+
+ReactDOM.render(<App/>, document.querySelector('#root'));
